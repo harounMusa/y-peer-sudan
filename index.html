@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="page.title">Y-PEER Sudan | Youth Peer Education Network</title>
+  <meta name="description" data-i18n="page.desc" content="Y-PEER Sudan — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231b134b'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23fa7a04' stroke-width='2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='%23fa7a04'%3EYP%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fa7a04',
+            'primary-dark': '#d66400',
+            accent: '#4cfdf1',
+            dark: '#1b134b',
+            'dark-light': '#2a1f5e',
+            purple: '#8f6bf7',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fa7a04;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:has(+ a)::after { margin-bottom: 0; }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -12px rgba(27, 19, 75, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-white text-dark antialiased">
+
+  <div id="header"></div>
+
+  <main>
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-16">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-purple/30"></div>
+      <div class="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+      <!-- Globe decorative element -->
+      <div class="absolute right-2 lg:right-12 top-1/2 -translate-y-1/2 w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 opacity-40 lg:opacity-60 pointer-events-none mix-blend-screen">
+        <svg viewBox="0 0 500 500" class="w-full h-full" aria-hidden="true">
+          <defs>
+            <radialGradient id="globeGrad" cx="35%" cy="30%" r="65%">
+              <stop offset="0%" stop-color="#3a2f7e"/>
+              <stop offset="35%" stop-color="#1b134b"/>
+              <stop offset="100%" stop-color="#0f0a2e"/>
+            </radialGradient>
+            <radialGradient id="gShine" cx="28%" cy="22%" r="60%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+              <stop offset="50%" stop-color="rgba(255,255,255,0.03)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+            <radialGradient id="gEdge" cx="50%" cy="50%" r="50%">
+              <stop offset="88%" stop-color="rgba(0,0,0,0)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+            </radialGradient>
+            <radialGradient id="atmos" cx="50%" cy="50%" r="50%">
+              <stop offset="88%" stop-color="rgba(250,122,4,0)"/>
+              <stop offset="94%" stop-color="rgba(250,122,4,0.08)"/>
+              <stop offset="100%" stop-color="rgba(250,122,4,0)"/>
+            </radialGradient>
+          </defs>
+          <circle cx="250" cy="250" r="238" fill="none" stroke="url(#atmos)" stroke-width="20"/>
+          <circle cx="250" cy="250" r="225" fill="url(#globeGrad)" stroke="rgba(250,122,4,0.2)" stroke-width="1.2"/>
+          <path d="M 60 130 Q 155 85 250 85 Q 345 85 440 130" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 35 190 Q 145 145 250 145 Q 355 145 465 190" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 25 250 Q 137 250 250 250 Q 363 250 475 250" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M 35 310 Q 145 355 250 355 Q 355 355 465 310" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 60 370 Q 155 415 250 415 Q 345 415 440 370" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 160 137 160 250 Q 160 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 205 137 205 250 Q 205 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 250 137 250 250 Q 250 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 295 137 295 250 Q 295 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 340 137 340 250 Q 340 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 185 148 C 205 138 235 135 255 138 C 275 140 295 145 305 150 C 320 158 335 175 345 195 C 350 212 348 228 340 245 C 328 265 315 285 300 308 C 288 328 275 348 265 358 C 255 362 245 358 238 348 C 230 335 222 318 216 300 C 210 282 205 268 200 255 C 195 245 188 235 182 222 C 178 215 180 208 186 200 C 192 192 198 188 202 185 C 195 180 188 172 183 165 C 180 158 182 152 185 148 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+          <path d="M 260 178 C 272 173 286 174 298 178 C 305 182 310 192 312 202 C 312 214 306 226 296 236 C 285 246 272 250 260 250 C 248 250 240 245 235 236 C 230 226 232 214 236 204 C 240 194 246 186 255 182 C 258 180 260 179 260 178 Z" fill="#fa7a04" opacity="0.85"/>
+          <path d="M 260 178 C 272 173 286 174 298 178 C 305 182 310 192 312 202 C 312 214 306 226 296 236 C 285 246 272 250 260 250 C 248 250 240 245 235 236 C 230 226 232 214 236 204 C 240 194 246 186 255 182 C 258 180 260 179 260 178 Z" fill="none" stroke="#fa7a04" stroke-width="2" opacity="0.3"/>
+          <circle cx="250" cy="250" r="225" fill="url(#gShine)"/>
+          <circle cx="250" cy="250" r="225" fill="url(#gEdge)"/>
+        </svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
+            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span data-i18n="hero.badge">Youth-Led &middot; Peer-Driven &middot; Community-First</span>
+          </div>
+
+          <h1 data-i18n="hero.title" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
+            Empowering<br>
+            <span class="text-primary">Sudan's Youth</span><br>
+            to Lead Change
+          </h1>
+
+          <p data-i18n="hero.desc" class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
+            Y-PEER Sudan is a youth-led peer education network advancing sexual and reproductive health,
+            gender equality, and peacebuilding across Sudan. We equip young people with knowledge,
+            skills, and opportunities to drive community transformation.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="contact.html" data-i18n="hero.cta" class="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5">
+              Join the Network
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="who-we-are.html" data-i18n="hero.learn" class="inline-flex items-center justify-center px-8 py-4 border border-gray-500 hover:border-accent text-gray-300 hover:text-accent font-semibold rounded-full transition-all duration-300">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block">
+        <svg class="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="home.wwd.title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark">What <span class="text-primary">We Do</span></h2>
+          <p data-i18n="home.wwd.desc" class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.</p>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-primary group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h3 data-i18n="card.srhr" class="mt-6 text-xl font-bold text-dark">Sexual &amp; Reproductive Health</h3>
+            <p data-i18n="card.srhr.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-dark transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 data-i18n="card.gbv" class="mt-6 text-xl font-bold text-dark">GBV Prevention</h3>
+            <p data-i18n="card.gbv.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Gender-based violence prevention, survivor support referrals, and community advocacy for women's safety.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-purple/10 rounded-xl flex items-center justify-center group-hover:bg-purple group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-purple group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 data-i18n="card.hiv" class="mt-6 text-xl font-bold text-dark">HIV/AIDS Awareness</h3>
+            <p data-i18n="card.hiv.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-dark/5 rounded-xl flex items-center justify-center group-hover:bg-dark group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke-linecap="round"/><circle cx="9" cy="9" r=".5" fill="currentColor"/><circle cx="15" cy="9" r=".5" fill="currentColor"/></svg>
+            </div>
+            <h3 data-i18n="card.mental" class="mt-6 text-xl font-bold text-dark">Mental Health</h3>
+            <p data-i18n="card.mental.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being.</p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="what-we-do.html" data-i18n="home.wwd.link" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors">
+            View All Programs <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="home.numbers.title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">By the <span class="text-primary">Numbers</span></h2>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center"><div class="text-5xl font-bold text-primary">2018</div><div data-i18n="home.numbers.founded" class="mt-2 text-gray-400">Founded</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-accent">500+</div><div data-i18n="home.numbers.educators" class="mt-2 text-gray-400">Peer Educators</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-purple">15+</div><div data-i18n="home.numbers.partnerships" class="mt-2 text-gray-400">Partnerships</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-primary">10k+</div><div data-i18n="home.numbers.reached" class="mt-2 text-gray-400">Youth Reached</div></div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="impact.html" data-i18n="home.impact.link" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-white transition-colors">
+            See Our Impact <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="shared.js"></script>
+  <script>
+    i18n.register('index', {
+      en: {
+        'page.title': 'Y-PEER Sudan | Youth Peer Education Network',
+        'page.desc': 'Y-PEER Sudan — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.',
+        'hero.badge': 'Youth-Led \u00B7 Peer-Driven \u00B7 Community-First',
+        'hero.title': 'Empowering<br><span class="text-primary">Sudan\'s Youth</span><br>to Lead Change',
+        'hero.desc': 'Y-PEER Sudan is a youth-led peer education network advancing sexual and reproductive health, gender equality, and peacebuilding across Sudan. We equip young people with knowledge, skills, and opportunities to drive community transformation.',
+        'hero.cta': 'Join the Network',
+        'hero.learn': 'Learn More',
+        'home.wwd.title': 'What <span class="text-primary">We Do</span>',
+        'home.wwd.desc': 'Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.',
+        'card.srhr': 'Sexual &amp; Reproductive Health',
+        'card.srhr.desc': 'Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services.',
+        'card.gbv': 'GBV Prevention',
+        'card.gbv.desc': 'Gender-based violence prevention, survivor support referrals, and community advocacy for women\u2019s safety.',
+        'card.hiv': 'HIV/AIDS Awareness',
+        'card.hiv.desc': 'Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV.',
+        'card.mental': 'Mental Health',
+        'card.mental.desc': 'Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being.',
+        'home.wwd.link': 'View All Programs',
+        'home.numbers.title': 'By the <span class="text-primary">Numbers</span>',
+        'home.numbers.founded': 'Founded',
+        'home.numbers.educators': 'Peer Educators',
+        'home.numbers.partnerships': 'Partnerships',
+        'home.numbers.reached': 'Youth Reached',
+        'home.impact.link': 'See Our Impact',
+      },
+      ar: {
+        'page.title': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 | \u0634\u0628\u0643\u0629 \u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0646\u0638\u064A\u0631 \u0644\u0644\u0634\u0628\u0627\u0628',
+        'page.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0645\u0643\u064A\u0646 \u0627\u0644\u0634\u0628\u0627\u0628 \u0645\u0646 \u062E\u0644\u0627\u0644 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645.',
+        'hero.badge': '\u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u00B7 \u0628\u064A\u0646 \u0627\u0644\u0623\u0642\u0631\u0627\u0646 \u00B7 \u0627\u0644\u0645\u062C\u062A\u0645\u0639 \u0623\u0648\u0644\u0627\u064B',
+        'hero.title': '\u062A\u0645\u0643\u064A\u0646<br><span class="text-primary">\u0634\u0628\u0627\u0628 \u0627\u0644\u0633\u0648\u062F\u0627\u0646</span><br>\u0644\u0642\u064A\u0627\u062F\u0629 \u0627\u0644\u062A\u063A\u064A\u064A\u0631',
+        'hero.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0639\u0645\u0644 \u0639\u0644\u0649 \u062A\u0639\u0632\u064A\u0632 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645 \u0641\u064A \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0633\u0648\u062F\u0627\u0646. \u0646\u0642\u0648\u0645 \u062A\u0632\u0648\u064A\u062F \u0627\u0644\u0634\u0628\u0627\u0628 \u0628\u0627\u0644\u0645\u0639\u0631\u0641\u0629 \u0648\u0627\u0644\u0645\u0647\u0627\u0631\u0627\u062A \u0648\u0627\u0644\u0641\u0631\u0635 \u0644\u062F\u0641\u0639 \u0627\u0644\u062A\u062D\u0648\u0644 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A.',
+        'hero.cta': '\u0627\u0646\u0636\u0645 \u0625\u0644\u0649 \u0627\u0644\u0634\u0628\u0643\u0629',
+        'hero.learn': '\u0627\u0639\u0631\u0641 \u0627\u0644\u0645\u0632\u064A\u062F',
+        'home.wwd.title': '\u0645\u0627 <span class="text-primary">\u0646\u0642\u0648\u0645</span> \u0628\u0647',
+        'home.wwd.desc': '\u0645\u0646 \u062E\u0644\u0627\u0644 \u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0646\u0638\u064A\u0631 \u0648\u0627\u0644\u0645\u0634\u0627\u0631\u0643\u0629 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A\u0629\u060C \u0646\u062A\u0635\u062F\u0649 \u0644\u0623\u0643\u062B\u0631 \u0627\u0644\u0642\u0636\u0627\u064A\u0627 \u0625\u0644\u062D\u0627\u062D\u0627\u064B \u0627\u0644\u062A\u064A \u062A\u0648\u0627\u062C\u0647 \u0627\u0644\u0634\u0628\u0627\u0628 \u0641\u064A \u0627\u0644\u0633\u0648\u062F\u0627\u0646.',
+        'card.srhr': '\u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629',
+        'card.srhr.desc': '\u062A\u062F\u0631\u064A\u0633 \u0634\u0627\u0645\u0644 \u0644\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629\u060C \u0648\u0627\u0644\u062A\u0648\u0639\u064A\u0629 \u0628\u062A\u0646\u0638\u064A\u0645 \u0627\u0644\u0623\u0633\u0631\u0629\u060C \u0648\u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u062E\u062F\u0645\u0627\u062A \u0635\u062D\u064A\u0629 \u0635\u062F\u064A\u0642\u0629 \u0644\u0644\u0634\u0628\u0627\u0628.',
+        'card.gbv': '\u0627\u0644\u0648\u0642\u0627\u064A\u0629 \u0645\u0646 \u0627\u0644\u0639\u0646\u0641 \u0627\u0644\u0642\u0627\u0626\u0645 \u0639\u0644\u0649 \u0627\u0644\u0646\u0648\u0639 \u0627\u0644\u0627\u062C\u062A\u0645\u0627\u0639\u064A',
+        'card.gbv.desc': '\u0627\u0644\u0648\u0642\u0627\u064A\u0629 \u0645\u0646 \u0627\u0644\u0639\u0646\u0641 \u0627\u0644\u0642\u0627\u0626\u0645 \u0639\u0644\u0649 \u0627\u0644\u0646\u0648\u0639 \u0627\u0644\u0627\u062C\u062A\u0645\u0627\u0639\u064A\u060C \u0648\u0625\u062D\u0627\u0644\u0627\u062A \u062F\u0639\u0645 \u0627\u0644\u0646\u0627\u062C\u064A\u0646\u060C \u0648\u0627\u0644\u062F\u0639\u0648\u0629 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A\u0629 \u0644\u0633\u0644\u0627\u0645\u0629 \u0627\u0644\u0645\u0631\u0623\u0629.',
+        'card.hiv': '\u0627\u0644\u062A\u0648\u0639\u064A\u0629 \u0628\u0641\u064A\u0631\u0648\u0633 HIV/\u0627\u0644\u0625\u064A\u062F\u0632',
+        'card.hiv.desc': '\u0627\u0644\u062D\u062F \u0645\u0646 \u0627\u0644\u0648\u0635\u0645\u060C \u0648\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0648\u0642\u0627\u0626\u064A\u060C \u0648\u062A\u0639\u0632\u064A\u0632 \u0627\u0644\u0641\u062D\u0635 \u0627\u0644\u0637\u0648\u0639\u064A\u060C \u0648\u0627\u0644\u062F\u0639\u0645 \u0644\u0644\u0645\u062A\u0639\u0627\u0634\u064A\u0646 \u0645\u0639 \u0627\u0644\u0641\u064A\u0631\u0648\u0633.',
+        'card.mental': '\u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u0646\u0641\u0633\u064A\u0629',
+        'card.mental.desc': '\u0627\u0644\u062A\u0648\u0639\u064A\u0629 \u0628\u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u0646\u0641\u0633\u064A\u0629\u060C \u0648\u0627\u0644\u062F\u0639\u0645 \u0627\u0644\u0646\u0641\u0633\u064A \u0627\u0644\u0627\u062C\u062A\u0645\u0627\u0639\u064A\u060C \u0648\u0627\u0644\u0625\u0631\u0634\u0627\u062F \u0627\u0644\u0646\u0638\u064A\u0631\u060C \u0648\u0645\u0643\u0627\u0641\u062D\u0629 \u0627\u0644\u0648\u0635\u0645 \u062D\u0648\u0644 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u0646\u0641\u0633\u064A\u0629.',
+        'home.wwd.link': '\u0639\u0631\u0636 \u0643\u0644 \u0627\u0644\u0628\u0631\u0627\u0645\u062C',
+        'home.numbers.title': '\u0628\u0627\u0644<span class="text-primary">\u0623\u0631\u0642\u0627\u0645</span>',
+        'home.numbers.founded': '\u062A\u0623\u0633\u064A\u0633',
+        'home.numbers.educators': '\u0645\u0631\u0628\u0648\u0646 \u0646\u0638\u0631\u0627\u0621',
+        'home.numbers.partnerships': '\u0634\u0631\u0627\u0643\u0627\u062A',
+        'home.numbers.reached': '\u0634\u0628\u0627\u0628 \u062A\u0645 \u062A\u062D\u0642\u064A\u0642\u0647\u0645',
+        'home.impact.link': '\u0634\u0627\u0647\u062F \u062A\u0623\u062B\u064A\u0631\u0646\u0627',
+      }
+    });
+    i18n.setLang(i18n.lang);
+  </script>
+</body>
+</html>
