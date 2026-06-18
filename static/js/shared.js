@@ -116,7 +116,7 @@
     var footerLogo = logo.replace('group-hover:scale-105 transition-transform', '');
     var linkItems = PAGES.map(function(p) { return '<li><a href="' + p.href + '" class="text-gray-400 hover:text-primary transition-colors">' + i18n.t(p.key) + '</a></li>'; }).join('');
     var socialLinks = [
-      { url: 'https://facebook.com/ypeerkhartoum', label: 'Facebook', icon: '<circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 6.5h-2a3 3 0 00-3 3V12H8v2.5h2V22h2.5v-7.5h2.5L15 12h-2.5V9.5a.5.5 0 01.5-.5h2V6.5z" fill="currentColor"/>' },
+      { url: 'https://facebook.com/YPeerKhartoum', label: 'Facebook', icon: '<circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15 6.5h-2a3 3 0 00-3 3V12H8v2.5h2V22h2.5v-7.5h2.5L15 12h-2.5V9.5a.5.5 0 01.5-.5h2V6.5z" fill="currentColor"/>' },
       { url: 'https://twitter.com/ypeerkhartoum', label: 'X', icon: '<path d="M18 5l-5 6.5L18 19h-3.5l-3.5-5-4 5H4l5-6.5L4.5 5H8l3 4.5L14.5 5H18z" fill="currentColor"/>' },
       { url: 'https://instagram.com/ypeerkhartoum', label: 'Instagram', icon: '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>' },
     ];
@@ -141,7 +141,7 @@
     '</div>';
     return '<footer class="bg-dark border-t border-white/10">' +
       shapesHtml +
-      '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">' +
+      '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-10">' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">' +
           '<div>' +
             '<div class="flex items-center gap-3">' + footerLogo + '<span class="text-white font-bold text-lg">' + i18n.t('brand.name') + '</span></div>' +

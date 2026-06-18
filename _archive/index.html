@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page.title">Y-PEER Sudan | Youth Peer Education Network</title>
-  <meta name="description" data-i18n="page.desc" content="Y-PEER Sudan — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.">
+  <title data-i18n="page.title">Y-PEER Khartoum | Youth Peer Education Network</title>
+  <meta name="description" data-i18n="page.desc" content="Y-PEER Khartoum — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231b134b'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23fa7a04' stroke-width='2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='%23fa7a04'%3EYP%3C/text%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
   <script>
@@ -61,7 +61,7 @@
 
       <!-- Globe decorative element -->
       <div class="absolute right-2 lg:right-12 top-1/2 -translate-y-1/2 w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 opacity-40 lg:opacity-60 pointer-events-none mix-blend-screen">
-        <svg viewBox="0 0 500 500" class="w-full h-full" aria-hidden="true">
+        <svg viewBox="0 0 500 500" class="w-full h-full animate-[spin_30s_linear_infinite]" aria-hidden="true">
           <defs>
             <radialGradient id="globeGrad" cx="35%" cy="30%" r="65%">
               <stop offset="0%" stop-color="#3a2f7e"/>
@@ -82,6 +82,12 @@
               <stop offset="94%" stop-color="rgba(250,122,4,0.08)"/>
               <stop offset="100%" stop-color="rgba(250,122,4,0)"/>
             </radialGradient>
+            <style>
+              @keyframes globe-pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.08); }
+              }
+            </style>
           </defs>
           <circle cx="250" cy="250" r="238" fill="none" stroke="url(#atmos)" stroke-width="20"/>
           <circle cx="250" cy="250" r="225" fill="url(#globeGrad)" stroke="rgba(250,122,4,0.2)" stroke-width="1.2"/>
@@ -95,9 +101,9 @@
           <path d="M 250 25 Q 250 137 250 250 Q 250 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
           <path d="M 250 25 Q 295 137 295 250 Q 295 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
           <path d="M 250 25 Q 340 137 340 250 Q 340 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-          <path d="M 185 148 C 205 138 235 135 255 138 C 275 140 295 145 305 150 C 320 158 335 175 345 195 C 350 212 348 228 340 245 C 328 265 315 285 300 308 C 288 328 275 348 265 358 C 255 362 245 358 238 348 C 230 335 222 318 216 300 C 210 282 205 268 200 255 C 195 245 188 235 182 222 C 178 215 180 208 186 200 C 192 192 198 188 202 185 C 195 180 188 172 183 165 C 180 158 182 152 185 148 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
-          <path d="M 260 178 C 272 173 286 174 298 178 C 305 182 310 192 312 202 C 312 214 306 226 296 236 C 285 246 272 250 260 250 C 248 250 240 245 235 236 C 230 226 232 214 236 204 C 240 194 246 186 255 182 C 258 180 260 179 260 178 Z" fill="#fa7a04" opacity="0.85"/>
-          <path d="M 260 178 C 272 173 286 174 298 178 C 305 182 310 192 312 202 C 312 214 306 226 296 236 C 285 246 272 250 260 250 C 248 250 240 245 235 236 C 230 226 232 214 236 204 C 240 194 246 186 255 182 C 258 180 260 179 260 178 Z" fill="none" stroke="#fa7a04" stroke-width="2" opacity="0.3"/>
+          <path d="M 185 145 C 205 132 240 128 265 130 C 290 132 310 138 325 148 C 340 158 348 172 345 190 C 342 208 335 222 328 238 C 320 254 315 268 308 282 C 300 298 290 310 278 318 C 268 324 258 326 248 324 C 238 320 228 312 220 302 C 212 290 206 276 200 260 C 194 244 190 228 186 212 C 182 196 180 180 182 168 C 184 158 186 152 185 145 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+          <path class="animate-[globe-pulse_3s_ease-in-out_infinite]" d="M 268 175 C 282 172 298 174 308 178 C 318 182 322 192 320 202 C 318 212 316 222 310 232 C 304 242 294 250 284 254 C 274 258 264 256 256 250 C 248 244 242 234 238 222 C 234 210 236 198 240 188 C 244 178 252 172 262 168 C 266 166 268 170 268 175 Z" fill="#fa7a04" opacity="0.9"/>
+          <path d="M 268 175 C 282 172 298 174 308 178 C 318 182 322 192 320 202 C 318 212 316 222 310 232 C 304 242 294 250 284 254 C 274 258 264 256 256 250 C 248 244 242 234 238 222 C 234 210 236 198 240 188 C 244 178 252 172 262 168 C 266 166 268 170 268 175 Z" fill="none" stroke="#fa7a04" stroke-width="2.5" opacity="0.6"/>
           <circle cx="250" cy="250" r="225" fill="url(#gShine)"/>
           <circle cx="250" cy="250" r="225" fill="url(#gEdge)"/>
         </svg>
@@ -117,7 +123,7 @@
           </h1>
 
           <p data-i18n="hero.desc" class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
-            Y-PEER Sudan is a youth-led peer education network advancing sexual and reproductive health,
+            Y-PEER Khartoum is a youth-led peer education network advancing sexual and reproductive health,
             gender equality, and peacebuilding across Sudan. We equip young people with knowledge,
             skills, and opportunities to drive community transformation.
           </p>
@@ -213,11 +219,11 @@
   <script>
     i18n.register('index', {
       en: {
-        'page.title': 'Y-PEER Sudan | Youth Peer Education Network',
-        'page.desc': 'Y-PEER Sudan — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.',
+        'page.title': 'Y-PEER Khartoum | Youth Peer Education Network',
+        'page.desc': 'Y-PEER Khartoum — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.',
         'hero.badge': 'Youth-Led \u00B7 Peer-Driven \u00B7 Community-First',
         'hero.title': 'Empowering<br><span class="text-primary">Sudan\'s Youth</span><br>to Lead Change',
-        'hero.desc': 'Y-PEER Sudan is a youth-led peer education network advancing sexual and reproductive health, gender equality, and peacebuilding across Sudan. We equip young people with knowledge, skills, and opportunities to drive community transformation.',
+        'hero.desc': 'Y-PEER Khartoum is a youth-led peer education network advancing sexual and reproductive health, gender equality, and peacebuilding across Sudan. We equip young people with knowledge, skills, and opportunities to drive community transformation.',
         'hero.cta': 'Join the Network',
         'hero.learn': 'Learn More',
         'home.wwd.title': 'What <span class="text-primary">We Do</span>',
@@ -239,11 +245,11 @@
         'home.impact.link': 'See Our Impact',
       },
       ar: {
-        'page.title': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 | \u0634\u0628\u0643\u0629 \u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0646\u0638\u064A\u0631 \u0644\u0644\u0634\u0628\u0627\u0628',
-        'page.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0645\u0643\u064A\u0646 \u0627\u0644\u0634\u0628\u0627\u0628 \u0645\u0646 \u062E\u0644\u0627\u0644 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645.',
+        'page.title': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645 | \u0634\u0628\u0643\u0629 \u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0646\u0638\u064A\u0631 \u0644\u0644\u0634\u0628\u0627\u0628',
+        'page.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0645\u0643\u064A\u0646 \u0627\u0644\u0634\u0628\u0627\u0628 \u0645\u0646 \u062E\u0644\u0627\u0644 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645.',
         'hero.badge': '\u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u00B7 \u0628\u064A\u0646 \u0627\u0644\u0623\u0642\u0631\u0627\u0646 \u00B7 \u0627\u0644\u0645\u062C\u062A\u0645\u0639 \u0623\u0648\u0644\u0627\u064B',
         'hero.title': '\u062A\u0645\u0643\u064A\u0646<br><span class="text-primary">\u0634\u0628\u0627\u0628 \u0627\u0644\u0633\u0648\u062F\u0627\u0646</span><br>\u0644\u0642\u064A\u0627\u062F\u0629 \u0627\u0644\u062A\u063A\u064A\u064A\u0631',
-        'hero.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u0633\u0648\u062F\u0627\u0646 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0639\u0645\u0644 \u0639\u0644\u0649 \u062A\u0639\u0632\u064A\u0632 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645 \u0641\u064A \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0633\u0648\u062F\u0627\u0646. \u0646\u0642\u0648\u0645 \u062A\u0632\u0648\u064A\u062F \u0627\u0644\u0634\u0628\u0627\u0628 \u0628\u0627\u0644\u0645\u0639\u0631\u0641\u0629 \u0648\u0627\u0644\u0645\u0647\u0627\u0631\u0627\u062A \u0648\u0627\u0644\u0641\u0631\u0635 \u0644\u062F\u0641\u0639 \u0627\u0644\u062A\u062D\u0648\u0644 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A.',
+        'hero.desc': '\u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645 \u0647\u0648 \u0634\u0628\u0643\u0629 \u062A\u0639\u0644\u064A\u0645 \u0646\u0638\u064A\u0631 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0634\u0628\u0627\u0628 \u062A\u0639\u0645\u0644 \u0639\u0644\u0649 \u062A\u0639\u0632\u064A\u0632 \u0627\u0644\u0635\u062D\u0629 \u0627\u0644\u062C\u0646\u0633\u064A\u0629 \u0648\u0627\u0644\u0625\u0646\u062C\u0627\u0628\u064A\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0648\u0627\u0629 \u0628\u064A\u0646 \u0627\u0644\u062C\u0646\u0633\u064A\u0646 \u0648\u0628\u0646\u0627\u0621 \u0627\u0644\u0633\u0644\u0627\u0645 \u0641\u064A \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0633\u0648\u062F\u0627\u0646. \u0646\u0642\u0648\u0645 \u062A\u0632\u0648\u064A\u062F \u0627\u0644\u0634\u0628\u0627\u0628 \u0628\u0627\u0644\u0645\u0639\u0631\u0641\u0629 \u0648\u0627\u0644\u0645\u0647\u0627\u0631\u0627\u062A \u0648\u0627\u0644\u0641\u0631\u0635 \u0644\u062F\u0641\u0639 \u0627\u0644\u062A\u062D\u0648\u0644 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A.',
         'hero.cta': '\u0627\u0646\u0636\u0645 \u0625\u0644\u0649 \u0627\u0644\u0634\u0628\u0643\u0629',
         'hero.learn': '\u0627\u0639\u0631\u0641 \u0627\u0644\u0645\u0632\u064A\u062F',
         'home.wwd.title': '\u0645\u0627 <span class="text-primary">\u0646\u0642\u0648\u0645</span> \u0628\u0647',

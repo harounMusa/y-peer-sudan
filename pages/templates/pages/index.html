@@ -1,0 +1,223 @@
+{% extends 'pages/base.html' %}
+{% block head_meta %}
+  <title data-i18n="page.title">Y-PEER Khartoum | Youth Peer Education Network</title>
+  <meta name="description" data-i18n="page.desc" content="Y-PEER Khartoum — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.">
+{% endblock %}
+{% block content %}
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-16">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-purple/30"></div>
+      <div class="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+      <div class="absolute right-2 lg:right-12 top-1/2 -translate-y-1/2 w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 opacity-40 lg:opacity-60 pointer-events-none mix-blend-screen">
+        <svg viewBox="0 0 500 500" class="w-full h-full animate-[spin_30s_linear_infinite]" aria-hidden="true">
+          <defs>
+            <radialGradient id="globeGrad" cx="35%" cy="30%" r="65%">
+              <stop offset="0%" stop-color="#3a2f7e"/>
+              <stop offset="35%" stop-color="#1b134b"/>
+              <stop offset="100%" stop-color="#0f0a2e"/>
+            </radialGradient>
+            <radialGradient id="gShine" cx="28%" cy="22%" r="60%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+              <stop offset="50%" stop-color="rgba(255,255,255,0.03)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+            <radialGradient id="gEdge" cx="50%" cy="50%" r="50%">
+              <stop offset="88%" stop-color="rgba(0,0,0,0)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+            </radialGradient>
+            <radialGradient id="atmos" cx="50%" cy="50%" r="50%">
+              <stop offset="88%" stop-color="rgba(250,122,4,0)"/>
+              <stop offset="94%" stop-color="rgba(250,122,4,0.08)"/>
+              <stop offset="100%" stop-color="rgba(250,122,4,0)"/>
+            </radialGradient>
+            <style>
+              @keyframes globe-pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.08); }
+              }
+            </style>
+          </defs>
+          <circle cx="250" cy="250" r="238" fill="none" stroke="url(#atmos)" stroke-width="20"/>
+          <circle cx="250" cy="250" r="225" fill="url(#globeGrad)" stroke="rgba(250,122,4,0.2)" stroke-width="1.2"/>
+          <path d="M 60 130 Q 155 85 250 85 Q 345 85 440 130" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 35 190 Q 145 145 250 145 Q 355 145 465 190" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 25 250 Q 137 250 250 250 Q 363 250 475 250" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M 35 310 Q 145 355 250 355 Q 355 355 465 310" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 60 370 Q 155 415 250 415 Q 345 415 440 370" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 160 137 160 250 Q 160 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 205 137 205 250 Q 205 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 250 137 250 250 Q 250 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 295 137 295 250 Q 295 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 250 25 Q 340 137 340 250 Q 340 363 250 475" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <path d="M 185 145 C 205 132 240 128 265 130 C 290 132 310 138 325 148 C 340 158 348 172 345 190 C 342 208 335 222 328 238 C 320 254 315 268 308 282 C 300 298 290 310 278 318 C 268 324 258 326 248 324 C 238 320 228 312 220 302 C 212 290 206 276 200 260 C 194 244 190 228 186 212 C 182 196 180 180 182 168 C 184 158 186 152 185 145 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+          <path class="animate-[globe-pulse_3s_ease-in-out_infinite]" d="M 268 175 C 282 172 298 174 308 178 C 318 182 322 192 320 202 C 318 212 316 222 310 232 C 304 242 294 250 284 254 C 274 258 264 256 256 250 C 248 244 242 234 238 222 C 234 210 236 198 240 188 C 244 178 252 172 262 168 C 266 166 268 170 268 175 Z" fill="#fa7a04" opacity="0.9"/>
+          <path d="M 268 175 C 282 172 298 174 308 178 C 318 182 322 192 320 202 C 318 212 316 222 310 232 C 304 242 294 250 284 254 C 274 258 264 256 256 250 C 248 244 242 234 238 222 C 234 210 236 198 240 188 C 244 178 252 172 262 168 C 266 166 268 170 268 175 Z" fill="none" stroke="#fa7a04" stroke-width="2.5" opacity="0.6"/>
+          <circle cx="250" cy="250" r="225" fill="url(#gShine)"/>
+          <circle cx="250" cy="250" r="225" fill="url(#gEdge)"/>
+        </svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
+            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span data-i18n="hero.badge">Youth-Led &middot; Peer-Driven &middot; Community-First</span>
+          </div>
+
+          <h1 data-i18n="hero.title" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
+            Empowering<br>
+            <span class="text-primary">Sudan's Youth</span><br>
+            to Lead Change
+          </h1>
+
+          <p data-i18n="hero.desc" class="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
+            Y-PEER Khartoum is a youth-led peer education network advancing sexual and reproductive health,
+            gender equality, and peacebuilding across Sudan. We equip young people with knowledge,
+            skills, and opportunities to drive community transformation.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" data-i18n="hero.cta" class="inline-flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5">
+              Join the Network
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="/who-we-are/" data-i18n="hero.learn" class="inline-flex items-center justify-center px-8 py-4 border border-gray-500 hover:border-accent text-gray-300 hover:text-accent font-semibold rounded-full transition-all duration-300">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block">
+        <svg class="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="home.wwd.title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark">What <span class="text-primary">We Do</span></h2>
+          <p data-i18n="home.wwd.desc" class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.</p>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-primary group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h3 data-i18n="card.srhr" class="mt-6 text-xl font-bold text-dark">Sexual &amp; Reproductive Health</h3>
+            <p data-i18n="card.srhr.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-dark transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 data-i18n="card.gbv" class="mt-6 text-xl font-bold text-dark">GBV Prevention</h3>
+            <p data-i18n="card.gbv.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Gender-based violence prevention, survivor support referrals, and community advocacy for women's safety.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-purple/10 rounded-xl flex items-center justify-center group-hover:bg-purple group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-purple group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 data-i18n="card.hiv" class="mt-6 text-xl font-bold text-dark">HIV/AIDS Awareness</h3>
+            <p data-i18n="card.hiv.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-dark/5 rounded-xl flex items-center justify-center group-hover:bg-dark group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke-linecap="round"/><circle cx="9" cy="9" r=".5" fill="currentColor"/><circle cx="15" cy="9" r=".5" fill="currentColor"/></svg>
+            </div>
+            <h3 data-i18n="card.mental" class="mt-6 text-xl font-bold text-dark">Mental Health</h3>
+            <p data-i18n="card.mental.desc" class="mt-3 text-gray-500 leading-relaxed text-sm">Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being.</p>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="/what-we-do/" data-i18n="home.wwd.link" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors">
+            View All Programs <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 data-i18n="home.numbers.title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">By the <span class="text-primary">Numbers</span></h2>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center"><div class="text-5xl font-bold text-primary">2018</div><div data-i18n="home.numbers.founded" class="mt-2 text-gray-400">Founded</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-accent">500+</div><div data-i18n="home.numbers.educators" class="mt-2 text-gray-400">Peer Educators</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-purple">15+</div><div data-i18n="home.numbers.partnerships" class="mt-2 text-gray-400">Partnerships</div></div>
+          <div class="text-center"><div class="text-5xl font-bold text-primary">10k+</div><div data-i18n="home.numbers.reached" class="mt-2 text-gray-400">Youth Reached</div></div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="/impact/" data-i18n="home.impact.link" class="inline-flex items-center gap-2 text-accent font-semibold hover:text-white transition-colors">
+            See Our Impact <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block page_script %}
+  <script>
+    i18n.register('index', {
+  en: {
+    'page.title': 'Y-PEER Khartoum | Youth Peer Education Network',
+    'page.desc': 'Y-PEER Khartoum — A youth-led peer education network empowering young people through SRHR, gender equality, and peacebuilding.',
+    'hero.badge': 'Youth-Led · Peer-Driven · Community-First',
+    'hero.title': 'Empowering<br><span class="text-primary">Sudan\'s Youth</span><br>to Lead Change',
+    'hero.desc': 'Y-PEER Khartoum is a youth-led peer education network advancing sexual and reproductive health, gender equality, and peacebuilding across Sudan. We equip young people with knowledge, skills, and opportunities to drive community transformation.',
+    'hero.cta': 'Join the Network',
+    'hero.learn': 'Learn More',
+    'home.wwd.title': 'What <span class="text-primary">We Do</span>',
+    'home.wwd.desc': 'Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.',
+    'card.srhr': 'Sexual &amp; Reproductive Health',
+    'card.srhr.desc': 'Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services.',
+    'card.gbv': 'GBV Prevention',
+    'card.gbv.desc': 'Gender-based violence prevention, survivor support referrals, and community advocacy for women’s safety.',
+    'card.hiv': 'HIV/AIDS Awareness',
+    'card.hiv.desc': 'Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV.',
+    'card.mental': 'Mental Health',
+    'card.mental.desc': 'Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being.',
+    'home.wwd.link': 'View All Programs',
+    'home.numbers.title': 'By the <span class="text-primary">Numbers</span>',
+    'home.numbers.founded': 'Founded',
+    'home.numbers.educators': 'Peer Educators',
+    'home.numbers.partnerships': 'Partnerships',
+    'home.numbers.reached': 'Youth Reached',
+    'home.impact.link': 'See Our Impact',
+  },
+  ar: {
+    'page.title': 'ي-بير الخرطوم | شبكة تثقيف الأقران للشباب',
+    'page.desc': 'ي-بير الخرطوم — شبكة تثقيف أقران يقودها الشباب تعمل على تمكين الشباب من خلال الصحة الجنسية والإنجابية، والمساواة بين الجنسين، وبناء السلام.',
+    'hero.badge': 'يقودها الشباب · يوجهها الأقران · المجتمع أولاً',
+    'hero.title': 'تمكين<br><span class="text-primary">شباب السودان</span><br>لقيادة التغيير',
+    'hero.desc': 'ي-بير الخرطوم هي شبكة تثقيف أقران يقودها الشباب وتعمل على تعزيز الصحة الجنسية والإنجابية، والمساواة بين الجنسين، وبناء السلام في جميع أنحاء السودان. نحن نزود الشباب بالمعرفة، والمهارات، والفرص لقيادة التحول المجتمعي.',
+    'hero.cta': 'انضم إلى الشبكة',
+    'hero.learn': 'اعرف المزيد',
+    'home.wwd.title': 'ماذا <span class="text-primary">نفعل</span>',
+    'home.wwd.desc': 'من خلال تثقيف الأقران والمشاركة المجتمعية، نتصدى لأكثر القضايا إلحاحاً التي تواجه الشباب في السودان.',
+    'card.srhr': 'الصحة الجنسية &amp; الإنجابية',
+    'card.srhr.desc': 'تثقيف شامل حول الصحة الجنسية والإنجابية، والتوعية بتنظيم الأسرة، وتسهيل الوصول إلى خدمات صحية صديقة للشباب.',
+    'card.gbv': 'الوقاية من العنف القائم على النوع الاجتماعي',
+    'card.gbv.desc': 'الوقاية من العنف القائم على النوع الاجتماعي، وإحالة الناجين لتلقي الدعم، والمناصرة المجتمعية لسلامة المرأة.',
+    'card.hiv': 'التوعية بفيروس نقص المناعة البشري/الإيدز',
+    'card.hiv.desc': 'الحد من الوصمة، والتعليم الوقائي، وتعزيز الفحص الطوعي، وتقديم الدعم للمتعايشين مع الفيروس.',
+    'card.mental': 'الصحة النفسية',
+    'card.mental.desc': 'التوعية بالصحة النفسية، وتقديم الدعم النفسي والاجتماعي، والإرشاد النظير، ومكافحة الوصمة المحيطة بالسلامة النفسية.',
+    'home.wwd.link': 'عرض جميع البرامج',
+    'home.numbers.title': 'بالـ <span class="text-primary">أرقام</span>',
+    'home.numbers.founded': 'سنة التأسيس',
+    'home.numbers.educators': 'مثقفو الأقران',
+    'home.numbers.partnerships': 'الشراكات',
+    'home.numbers.reached': 'الشباب الذين تم الوصول إليهم',
+    'home.impact.link': 'شاهد تأثيرنا',
+  }
+});
+    i18n.setLang(i18n.lang);
+  </script>
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head_meta %}{% endblock %}
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231b134b'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23fa7a04' stroke-width='2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='14' fill='%23fa7a04'%3EYP%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com?version=3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#fa7a04',
+            'primary-dark': '#d66400',
+            accent: '#4cfdf1',
+            dark: '#1b134b',
+            'dark-light': '#2a1f5e',
+            purple: '#8f6bf7',
+            ypeer: {
+              orange: '#fa7a04',
+              dark: '#1b134b',
+              purple: '#8f6bf7',
+              cyan: '#4cfdf1',
+              light: '#F8F9FA',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            heading: ['Poppins', 'Cairo', 'sans-serif'],
+            body: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+          },
+          borderRadius: {
+            arch: '120px 120px 0px 0px',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@800;900&family=Cairo:wght@800;900&display=swap');
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Cairo', sans-serif; }
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fa7a04;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -12px rgba(27, 19, 75, 0.25);
+    }
+    .ypeer-card {
+      background: #ffffff;
+      border: 3px solid #1b134b;
+      border-radius: 24px;
+      box-shadow: 6px 6px 0px #8f6bf7;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .ypeer-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0px #fa7a04;
+    }
+  </style>
+</head>
+<body class="bg-white text-dark antialiased">
+
+  <div id="header"></div>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <div id="footer"></div>
+
+  {% load static %}
+  <script src="{% static 'js/shared.js' %}"></script>
+  {% block page_script %}{% endblock %}
+</body>
+</html>

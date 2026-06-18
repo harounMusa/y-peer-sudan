@@ -1,0 +1,59 @@
+{% extends 'pages/base.html' %}
+{% load news_extras %}
+{% block head_meta %}
+<meta name="description" content="Latest News — Y-PEER Khartoum updates, events, and stories from the field." data-i18n="page.desc">
+<title data-i18n="page.title">News | Y-PEER Khartoum</title>
+{% endblock %}
+{% block content %}
+<section class="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-accent/10"></div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight" data-i18n="news.hero.title">Latest <span class="text-primary">News</span></h1>
+    <p class="mt-4 text-lg sm:text-xl text-gray-300" data-i18n="news.hero.sub">Updates, events, and stories from Y-PEER Khartoum.</p>
+  </div>
+</section>
+
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {% if articles %}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for article in articles %}
+      <a href="{% url 'news:detail' article.slug %}" class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden card-hover group block">
+        <div class="h-48 {% cycle 'bg-gradient-to-br from-primary/20 to-primary/5' 'bg-gradient-to-br from-accent/20 to-accent/5' 'bg-gradient-to-br from-purple/20 to-purple/5' 'bg-gradient-to-br from-primary/20 to-primary/5' 'bg-gradient-to-br from-accent/20 to-accent/5' 'bg-gradient-to-br from-purple/20 to-purple/5' %} flex items-center justify-center">
+          {% if article.image %}
+          <img src="{{ article.image.url }}" alt="" class="w-full h-full object-cover">
+          {% else %}
+          <svg class="w-16 h-16 text-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+          {% endif %}
+        </div>
+        <div class="p-6">
+          {% with colors='text-primary'|add:' text-accent'|add:' text-purple'|add:' text-primary'|add:' text-accent'|add:' text-purple' %}
+          <span class="text-xs font-semibold uppercase tracking-wider {% cycle 'text-primary' 'text-accent' 'text-purple' 'text-primary' 'text-accent' 'text-purple' %}">
+            <span data-lang="en">{{ article.get_category_display }} · {{ article.published_date.year }}</span>
+            <span data-lang="ar" class="hidden">{{ article.category|category_ar }} · {{ article.published_date.year }}</span>
+          </span>
+          {% endwith %}
+          <h3 class="mt-3 text-xl font-bold text-dark"><span data-lang="en">{{ article.title_en }}</span><span data-lang="ar" class="hidden">{{ article.title_ar }}</span></h3>
+          <p class="mt-3 text-gray-500 leading-relaxed text-sm"><span data-lang="en">{{ article.summary_en }}</span><span data-lang="ar" class="hidden">{{ article.summary_ar }}</span></p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-center text-gray-400 text-lg" data-i18n="news.empty">No news articles yet. Check back soon!</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
+{% block page_script %}
+<script>
+  i18n.register({
+    'page.title': { en: 'News | Y-PEER Khartoum', ar: '\u0627\u0644\u0623\u062E\u0628\u0627\u0631 | \u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645' },
+    'page.desc': { en: 'Latest News \u2014 Y-PEER Khartoum updates, events, and stories from the field.', ar: '\u0622\u062E\u0631 \u0627\u0644\u0623\u062E\u0628\u0627\u0631 \u2014 \u062A\u062D\u062F\u064A\u062B\u0627\u062A \u0648\u0641\u0639\u0627\u0644\u064A\u0627\u062A \u0648\u0642\u0635\u0635 \u0645\u0646 \u0645\u064A\u062F\u0627\u0646 \u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645.' },
+    'news.hero.title': { en: 'Latest <span class="text-primary">News</span>', ar: '\u0622\u062E\u0631 <span class="text-primary">\u0627\u0644\u0623\u062E\u0628\u0627\u0631</span>' },
+    'news.hero.sub': { en: 'Updates, events, and stories from Y-PEER Khartoum.', ar: '\u062A\u062D\u062F\u064A\u062B\u0627\u062A \u0648\u0641\u0639\u0627\u0644\u064A\u0627\u062A \u0648\u0642\u0635\u0635 \u0645\u0646 \u064A-\u0628\u064A\u0631 \u0627\u0644\u062E\u0631\u0637\u0648\u0645.' },
+    'news.empty': { en: 'No news articles yet. Check back soon!', ar: '\u0644\u0627 \u062A\u0648\u062C\u062F \u0623\u062E\u0628\u0627\u0631 \u0628\u0639\u062F. \u062A\u0627\u0628\u0639\u0646\u0627 \u0642\u0631\u064A\u0628\u0627\u064B!' },
+  });
+  i18n.setLang(i18n.lang);
+</script>
+{% endblock %}

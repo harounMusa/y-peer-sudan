@@ -1,0 +1,156 @@
+{% extends 'pages/base.html' %}
+{% block head_meta %}
+  <meta name="description" data-i18n="page.desc" content="What We Do — Y-PEER Khartoum programs: SRHR, GBV Prevention, HIV/AIDS, Mental Health, Youth Leadership.">
+  <title data-i18n="page.title">What We Do | Y-PEER Khartoum</title>
+{% endblock %}
+{% block content %}
+    <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-primary/20"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight" data-i18n="programs.hero.title">What <span class="text-primary">We Do</span></h1>
+        <p class="mt-4 text-lg sm:text-xl text-gray-300" data-i18n="programs.hero.sub">Peer-led programs tackling the most critical issues facing young people in Sudan.</p>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-dark" data-i18n="programs.areas.title">Our <span class="text-primary">Program Areas</span></h2>
+          <p class="mt-4 text-gray-500 max-w-2xl mx-auto text-lg" data-i18n="programs.areas.desc">Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.</p>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-primary group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.srhr">Sexual &amp; Reproductive Health</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.srhr.desc">Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services. We train peer educators to deliver accurate information on reproductive health, consent, and healthy relationships.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-dark transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.gbv">GBV Prevention</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.gbv.desc">Gender-based violence prevention, survivor support referrals, and community advocacy for women's safety. We work with communities to challenge harmful norms and support survivors.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-purple/10 rounded-xl flex items-center justify-center group-hover:bg-purple group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-purple group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.hiv">HIV/AIDS Awareness</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.hiv.desc">Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV. Our peer-led approach makes HIV education accessible and non-judgmental.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-dark/5 rounded-xl flex items-center justify-center group-hover:bg-dark group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2" stroke-linecap="round"/><circle cx="9" cy="9" r=".5" fill="currentColor"/><circle cx="15" cy="9" r=".5" fill="currentColor"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.mental">Mental Health</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.mental.desc">Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being. We create safe spaces for young people to talk about mental health.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-primary group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.leadership">Youth Leadership &amp; Advocacy</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.leadership.desc">Building the next generation of youth leaders through training in advocacy, public speaking, project management, and policy engagement. We amplify youth voices in decision-making spaces.</p>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-2xl shadow-lg border border-gray-100 card-hover group">
+            <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+              <svg class="w-7 h-7 text-dark group-hover:text-dark transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-dark" data-i18n="programs.card.peace">Peacebuilding &amp; Social Cohesion</h3>
+            <p class="mt-3 text-gray-500 leading-relaxed text-sm" data-i18n="programs.card.peace.desc">Promoting dialogue, conflict resolution, and social cohesion among diverse youth communities. We facilitate inter-community exchanges and peace education workshops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white" data-i18n="programs.approach.title">Our <span class="text-primary">Approach</span></h2>
+          <div class="mt-4 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto"><span class="text-2xl font-bold text-primary">1</span></div>
+            <h3 class="mt-6 text-xl font-bold text-white" data-i18n="programs.approach.train">Train the Trainer</h3>
+            <p class="mt-3 text-gray-400 text-sm" data-i18n="programs.approach.train.desc">We recruit and train youth peer educators using evidence-based curricula, equipping them with facilitation, communication, and counseling skills.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto"><span class="text-2xl font-bold text-accent">2</span></div>
+            <h3 class="mt-6 text-xl font-bold text-white" data-i18n="programs.approach.peer">Peer-to-Peer Outreach</h3>
+            <p class="mt-3 text-gray-400 text-sm" data-i18n="programs.approach.peer.desc">Trained peer educators reach young people in schools, universities, and community centers through workshops, awareness sessions, and one-on-one conversations.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple/20 rounded-full flex items-center justify-center mx-auto"><span class="text-2xl font-bold text-purple">3</span></div>
+            <h3 class="mt-6 text-xl font-bold text-white" data-i18n="programs.approach.action">Community Action</h3>
+            <p class="mt-3 text-gray-400 text-sm" data-i18n="programs.approach.action.desc">Youth-led initiatives translate learning into action — from community clean-ups and health campaigns to advocacy meetings with local leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block page_script %}
+  <script>
+    i18n.register('what-we-do', {
+  en: {
+    'page.title': 'What We Do | Y-PEER Khartoum',
+    'page.desc': 'What We Do — Y-PEER Khartoum programs: SRHR, GBV Prevention, HIV/AIDS, Mental Health, Youth Leadership.',
+    'programs.hero.title': 'What <span class="text-primary">We Do</span>',
+    'programs.hero.sub': 'Peer-led programs tackling the most critical issues facing young people in Sudan.',
+    'programs.areas.title': 'Our <span class="text-primary">Program Areas</span>',
+    'programs.areas.desc': 'Through peer education and community engagement, we tackle the most pressing issues facing young people in Sudan.',
+    'programs.card.srhr': 'Sexual &amp; Reproductive Health',
+    'programs.card.srhr.desc': 'Comprehensive SRHR education, family planning awareness, and access to youth-friendly health services. We train peer educators to deliver accurate information on reproductive health, consent, and healthy relationships.',
+    'programs.card.gbv': 'GBV Prevention',
+    'programs.card.gbv.desc': 'Gender-based violence prevention, survivor support referrals, and community advocacy for women’s safety. We work with communities to challenge harmful norms and support survivors.',
+    'programs.card.hiv': 'HIV/AIDS Awareness',
+    'programs.card.hiv.desc': 'Stigma reduction, prevention education, voluntary testing promotion, and support for those living with HIV. Our peer-led approach makes HIV education accessible and non-judgmental.',
+    'programs.card.mental': 'Mental Health',
+    'programs.card.mental.desc': 'Mental health awareness, psychosocial support, peer counseling, and combating stigma around mental well-being. We create safe spaces for young people to talk about mental health.',
+    'programs.card.leadership': 'Youth Leadership &amp; Advocacy',
+    'programs.card.leadership.desc': 'Building the next generation of youth leaders through training in advocacy, public speaking, project management, and policy engagement. We amplify youth voices in decision-making spaces.',
+    'programs.card.peace': 'Peacebuilding &amp; Social Cohesion',
+    'programs.card.peace.desc': 'Promoting dialogue, conflict resolution, and social cohesion among diverse youth communities. We facilitate inter-community exchanges and peace education workshops.',
+    'programs.approach.title': 'Our <span class="text-primary">Approach</span>',
+    'programs.approach.train': 'Train the Trainer',
+    'programs.approach.train.desc': 'We recruit and train youth peer educators using evidence-based curricula, equipping them with facilitation, communication, and counseling skills.',
+    'programs.approach.peer': 'Peer-to-Peer Outreach',
+    'programs.approach.peer.desc': 'Trained peer educators reach young people in schools, universities, and community centers through workshops, awareness sessions, and one-on-one conversations.',
+    'programs.approach.action': 'Community Action',
+    'programs.approach.action.desc': 'Youth-led initiatives translate learning into action — from community clean-ups and health campaigns to advocacy meetings with local leaders.',
+  },
+  ar: {
+    'page.title': 'ماذا نفعل | ي-بير الخرطوم',
+    'page.desc': 'ماذا نفعل — برامج شبكة ي-بير الخرطوم: الصحة الجنسية والإنجابية، الوقاية من العنف القائم على النوع الاجتماعي، فيروس نقص المناعة البشري/الإيدز، الصحة النفسية، والقيادة الشبابية.',
+    'programs.hero.title': 'ماذا <span class="text-primary">نفعل</span>',
+    'programs.hero.sub': 'برامج يقودها الأقران تتصدى لأكثر القضايا إلحاحاً التي تواجه الشباب في السودان.',
+    'programs.areas.title': 'مجالاتنا <span class="text-primary">البرنامجية</span>',
+    'programs.areas.desc': 'من خلال تثقيف الأقران والمشاركة المجتمعية، نتصدى لأكثر القضايا إلحاحاً التي تواجه الشباب في السودان.',
+    'programs.card.srhr': 'الصحة الجنسية &amp; الإنجابية',
+    'programs.card.srhr.desc': 'تثقيف شامل حول الصحة الجنسية والإنجابية، والتوعية بتنظيم الأسرة، وتسهيل الوصول إلى خدمات صحية صديقة للشباب. نحن ندرب مثقفي الأقران على تقديم معلومات دقيقة حول الصحة الإنجابية، والموافقة، والعلاقات الصحية.',
+    'programs.card.gbv': 'الوقاية من العنف القائم على النوع الاجتماعي',
+    'programs.card.gbv.desc': 'الالوقاية من العنف القائم على النوع الاجتماعي، وإحالة الناجين لتلقي الدعم، والمناصرة المجتمعية لسلامة المرأة. نحن نعمل مع المجتمعات المحلية لتحدي الأعراف والممارسات الضارة ودعم الناجين.',
+    'programs.card.hiv': 'التوعية بفيروس نقص المناعة البشري/الإيدز',
+    'programs.card.hiv.desc': 'الحد من الوصمة، والتثقيف الوقائي، وتعزيز الفحص الطوعي، وتقديم الدعم للمتعايشين مع الفيروس. إن نهجنا الذي يقوده الشباب يجعل التثقيف حول الفيروس متاحاً وخالياً من الأحكام المسبقة.',
+    'programs.card.mental': 'الصحة النفسية',
+    'programs.card.mental.desc': 'التوعية بالصحة النفسية، وتقديم الدعم النفسي والاجتماعي، والإرشاد النظير، ومكافحة الوصمة المحيطة بالسلامة النفسية. نحن نهيئ مساحات آمنة للشباب للتحدث عن صحتهم النفسية.',
+    'programs.card.leadership': 'الالقيادة الشبابية &amp; المناصرة',
+    'programs.card.leadership.desc': 'بناء الجيل القادم من القادة الشباب من خلال التدريب على المناصرة، والخطابة العامة، وإدارة المشاريع، والمشاركة في رسم السياسات. نحن نعمل على تضخيم أصوات الشباب في مساحات صنع القرار.',
+    'programs.card.peace': 'بناء السلام &amp; التماسك الاجتماعي',
+    'programs.card.peace.desc': 'تعزيز الحوار، وحل النزاعات، والتماسك الاجتماعي بين مختلف مجتمعات الشباب. نحن نسهل التبادل بين المجتمعات المحلية وورش عمل التثقيف من أجل السلام.',
+    'programs.approach.title': 'نهجنا <span class="text-primary">في العمل</span>',
+    'programs.approach.train': 'تدريب المدربين',
+    'programs.approach.train.desc': 'نحن نستقطب وندرب مثقفي الأقران الشباب باستخدام مناهج مبنية على الأدلة، ونزودهم بمهارات التيسير، والتواصل، والإرشاد.',
+    'programs.approach.peer': 'التوعية من نظير لنظير',
+    'programs.approach.peer.desc': 'يقوم مثقفو الأقران المدربون بالوصول إلى الشباب في المدارس، والجامعات، والمراكز المجتمعية من خلال ورش العمل، وجلسات التوعية، والمحادثات الفردية.',
+    'programs.approach.action': 'العمل المجتمعي',
+    'programs.approach.action.desc': 'مبادرات يقودها الشباب تترجم التعلم إلى واقع ملموس — من حملات النظافة البيئية والحملات الصحية إلى اجتماعات المناصرة مع القادة المحليين.',
+  }
+});
+    i18n.setLang(i18n.lang);
+  </script>
+{% endblock %}

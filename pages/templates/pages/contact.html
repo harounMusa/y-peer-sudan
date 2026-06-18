@@ -1,0 +1,138 @@
+{% extends 'pages/base.html' %}
+{% block head_meta %}
+  <title data-i18n="page.title">Contact Us | Y-PEER Khartoum</title>
+  <meta name="description" content="Contact Y-PEER Khartoum — Get in touch with our youth-led network." data-i18n="page.desc">
+{% endblock %}
+{% block content %}
+    <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-accent/10"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight" data-i18n="contact.hero.title">Get in <span class="text-primary">Touch</span></h1>
+        <p class="mt-4 text-lg sm:text-xl text-gray-300" data-i18n="contact.hero.sub">We'd love to hear from you. Reach out to collaborate, volunteer, or learn more.</p>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <h2 class="text-3xl font-bold text-dark" data-i18n="contact.form.title">Send Us a <span class="text-primary">Message</span></h2>
+            <p class="mt-4 text-gray-500" data-i18n="contact.form.desc">Fill in the form and our team will get back to you within 48 hours.</p>
+            <form class="mt-8 space-y-6" action="mailto:ypeerkhartoum@gmail.com" method="post" enctype="text/plain">
+              <div>
+                <label for="name" class="block text-sm font-medium text-dark mb-1" data-i18n="contact.form.name">Full Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-dark mb-1" data-i18n="contact.form.email">Email Address</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium text-dark mb-1" data-i18n="contact.form.subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-dark mb-1" data-i18n="contact.form.message">Message</label>
+                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-primary/30 hover:shadow-xl" data-i18n="contact.form.submit">Send Message</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-dark" data-i18n="contact.info.title">Contact <span class="text-primary">Information</span></h2>
+            <p class="mt-4 text-gray-500" data-i18n="contact.info.desc">Reach out directly through any of the channels below.</p>
+            <div class="mt-8 space-y-8">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-dark" data-i18n="contact.info.email">Email</h3>
+                  <a href="mailto:ypeerkhartoum@gmail.com" class="text-primary hover:text-primary-dark transition-colors">ypeerkhartoum@gmail.com</a>
+                  <p class="text-gray-500 text-sm mt-1" data-i18n="contact.info.email.response">We respond within 48 hours</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-dark" data-i18n="contact.info.location">Location</h3>
+                  <p class="text-gray-500" data-i18n="contact.info.location.addr">Khartoum, Sudan</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-purple/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-dark" data-i18n="contact.info.network">Network</h3>
+                  <p class="text-gray-500" data-i18n="contact.info.network.desc">Part of the global Y-PEER initiative</p>
+                  <p class="text-gray-500 text-sm mt-1" data-i18n="contact.info.network.desc2">Operating under UNFPA's youth program framework</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-12 p-8 bg-gradient-to-br from-dark to-dark-light rounded-2xl">
+              <h3 class="text-white font-semibold text-lg" data-i18n="contact.commitment.title">Our Commitment</h3>
+              <p class="mt-3 text-gray-400 text-sm leading-relaxed" data-i18n="contact.commitment.desc">Y-PEER Khartoum is committed to <span class="text-accent">safeguarding</span>, <span class="text-primary">inclusion</span>, and <span class="text-purple">transparency</span> in all our programs. We believe in the power of youth to lead, educate, and transform communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+{% block page_script %}
+  <script>
+    i18n.register('contact', {
+  en: {
+    'page.title': 'Contact Us | Y-PEER Khartoum',
+    'page.desc': 'Contact Y-PEER Khartoum — Get in touch with our youth-led network.',
+    'contact.hero.title': 'Get in <span class="text-primary">Touch</span>',
+    'contact.hero.sub': 'We’d love to hear from you. Reach out to collaborate, volunteer, or learn more.',
+    'contact.form.title': 'Send Us a <span class="text-primary">Message</span>',
+    'contact.form.desc': 'Fill in the form and our team will get back to you within 48 hours.',
+    'contact.form.name': 'Full Name',
+    'contact.form.email': 'Email Address',
+    'contact.form.subject': 'Subject',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send Message',
+    'contact.info.title': 'Contact <span class="text-primary">Information</span>',
+    'contact.info.desc': 'Reach out directly through any of the channels below.',
+    'contact.info.email': 'Email',
+    'contact.info.email.response': 'We respond within 48 hours',
+    'contact.info.location': 'Location',
+    'contact.info.location.addr': 'Khartoum, Sudan',
+    'contact.info.network': 'Network',
+    'contact.info.network.desc': 'Part of the global Y-PEER initiative',
+    'contact.info.network.desc2': 'Operating under UNFPA’s youth program framework',
+    'contact.commitment.title': 'Our Commitment',
+    'contact.commitment.desc': 'Y-PEER Khartoum is committed to <span class="text-accent">safeguarding</span>, <span class="text-primary">inclusion</span>, and <span class="text-purple">transparency</span> in all our programs. We believe in the power of youth to lead, educate, and transform communities.',
+  },
+  ar: {
+    'page.title': 'اتصل بنا | ي-بير الخرطوم',
+    'page.desc': 'اتصل بي-بير الخرطوم — تواصل مع شبكتنا التي يقودها الشباب.',
+    'contact.hero.title': 'تواصل <span class="text-primary">معنا</span>',
+    'contact.hero.sub': 'يسعدنا أن نسمع منك. تواصل معنا للتعاون، أو التطوع، أو لمعرفة المزيد.',
+    'contact.form.title': 'أرسل لنا <span class="text-primary">رسالة</span>',
+    'contact.form.desc': 'املأ النموذج وسيتواصل معك فريقنا خلال 48 ساعة.',
+    'contact.form.name': 'الاسم الكامل',
+    'contact.form.email': 'البريد الإلكتروني',
+    'contact.form.subject': 'الموضوع',
+    'contact.form.message': 'الرسالة',
+    'contact.form.submit': 'إرسال الرسالة',
+    'contact.info.title': 'معلومات <span class="text-primary">الاتصال</span>',
+    'contact.info.desc': 'تواصل معنا مباشرة من خلال أي من القنوات أدناه.',
+    'contact.info.email': 'البريد الإلكتروني',
+    'contact.info.email.response': 'نرد خلال 48 ساعة',
+    'contact.info.location': 'الموقع',
+    'contact.info.location.addr': 'الخرطوم، السودان',
+    'contact.info.network': 'الشبكة',
+    'contact.info.network.desc': 'جزء من مبادرة ي-بير العالمية',
+    'contact.info.network.desc2': 'نعمل تحت إطار برنامج صندوق الأمم المتحدة للسكان للشباب',
+    'contact.commitment.title': 'التزامنا',
+    'contact.commitment.desc': 'تلتزم ي-بير الخرطوم بـ <span class="text-accent">الحماية</span>، و<span class="text-primary">الشمولية</span>، و<span class="text-purple">الشفافية</span> في جميع برامجنا. ونؤمن بقدرة الشباب على القيادة، والتعليم، وتغيير المجتمعات.',
+  }
+});
+    i18n.setLang(i18n.lang);
+  </script>
+{% endblock %}

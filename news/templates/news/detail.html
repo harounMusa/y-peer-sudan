@@ -1,0 +1,46 @@
+{% extends 'pages/base.html' %}
+{% load news_extras %}
+{% block head_meta %}
+<meta name="description" content="{{ article.summary_en }}" data-i18n="news.detail.desc">
+<title data-i18n="news.detail.title">{{ article.title_en }} | Y-PEER Khartoum</title>
+{% endblock %}
+{% block content %}
+<section class="relative pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-accent/10"></div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-block text-xs font-semibold uppercase tracking-wider {% if article.category == 'announcement' or article.category == 'impact' %}text-primary{% elif article.category == 'training' or article.category == 'event' %}text-accent{% else %}text-purple{% endif %}">
+      <span data-lang="en">{{ article.get_category_display }} · {{ article.published_date|date:"M d, Y" }}</span>
+      <span data-lang="ar" class="hidden">{{ article.category|category_ar }} · {{ article.published_date|date:"Y/m/d" }}</span>
+    </span>
+    <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight"><span data-lang="en">{{ article.title_en }}</span><span data-lang="ar" class="hidden">{{ article.title_ar }}</span></h1>
+  </div>
+</section>
+
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    {% if article.image %}
+    <img src="{{ article.image.url }}" alt="" class="w-full rounded-2xl shadow-lg mb-10">
+    {% endif %}
+    <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+      <div data-lang="en">{{ article.body_en|linebreaks }}</div>
+      <div data-lang="ar" class="hidden" dir="rtl">{{ article.body_ar|linebreaks }}</div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-gray-100">
+      <a href="{% url 'news:list' %}" class="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+        <span data-i18n="news.back">Back to News</span>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block page_script %}
+<script>
+  i18n.register({
+    'news.back': { en: 'Back to News', ar: '\u0631\u062C\u0648\u0639 \u0625\u0644\u0649 \u0627\u0644\u0623\u062E\u0628\u0627\u0631' },
+    'news.detail.title': { en: '{{ article.title_en|escapejs }} | Y-PEER Khartoum', ar: '{{ article.title_ar|escapejs }} | Y-PEER \u0627\u0644\u062E\u0631\u0637\u0648\u0645' },
+    'news.detail.desc': { en: '{{ article.summary_en|escapejs }}', ar: '{{ article.summary_ar|escapejs }}' },
+  });
+  i18n.setLang(i18n.lang);
+</script>
+{% endblock %}
